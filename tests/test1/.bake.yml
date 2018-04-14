@@ -1,0 +1,9 @@
+project: project_name
+executables:
+  - first
+    - a.h
+    - b.c
+  - second
+    - c.h
+    - d.h
+testing: true
