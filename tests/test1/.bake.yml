@@ -1,9 +1,9 @@
 project: project_name
 executables:
-  - first
+  first:
     - a.h
     - b.c
-  - second
+  second:
     - c.h
-    - d.h
+    - d.c
 testing: true

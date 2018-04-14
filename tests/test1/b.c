@@ -2,5 +2,5 @@
 #include <stdio.h>
 
 int main() {
-    printf("Hello world from a and b!");
+    printf("Hello world from first executable!");
 }

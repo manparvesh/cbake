@@ -1,5 +1,6 @@
 # coding=utf-8
 import chalk
+import yaml
 
 try:
     from pathlib import Path
@@ -24,10 +25,12 @@ def main(directory):
     """
     directory = directory if directory is not None else '.'
     directory = directory + '/' if not directory.endswith('/') else directory
-    directory += BAKE_FILE
+    bake_file_path = directory + BAKE_FILE
 
-    if isfile(directory):
+    if isfile(bake_file_path):
         click.echo(chalk.green('Building project...'))
         # TODO read config file, build, etc
+        config_content = yaml.load(open(bake_file_path))
+        print(config_content.get('executables'))
     else:
         click.echo(chalk.red('No .bake.yml file found in this directory'))

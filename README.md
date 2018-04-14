@@ -25,10 +25,10 @@ project: project_name
 # executables that you want to add, with the C/C++ files
 # that you want to add to each executable
 executables:
-  - first
+  first:
     - a.h
     - b.c
-  - second
+  second:
     - c.h
     - d.h
 ```
