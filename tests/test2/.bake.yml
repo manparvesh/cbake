@@ -1,0 +1,10 @@
+project: test2
+compile: g++
+executables:
+  first:
+    - a.h
+    - b.cpp
+  second:
+    - c.h
+    - d.cpp
+testing: true

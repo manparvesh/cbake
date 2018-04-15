@@ -103,3 +103,6 @@ ENV/
 .idea
 venv2.7/
 venv3.6/
+
+# C output files
+*.o

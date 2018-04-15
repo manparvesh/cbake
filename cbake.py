@@ -53,12 +53,14 @@ def main(directory, ouput_directory):
         directory_with_space = " " + directory
         build_successful = True
         for executable in executables:
-            command_string = "gcc " + (directory if len(executables) is not 0 else "") + directory_with_space.join(
-                executables[executable]) + " -o " + ouput_directory + executable
-            green_output("Building executable: " + executable)
+            executable_name = executable + ".o"
+            command_string = config_content.get('compile') + " " + (
+                directory if len(executables) is not 0 else "") + directory_with_space.join(
+                executables[executable]) + " -o " + ouput_directory + executable_name
+            green_output("Building executable: " + executable_name)
             query_result = os.system(command_string)
             if query_result == 0:
-                green_output("Successfully built executable: " + executable)
+                green_output("Successfully built executable: " + executable_name)
             else:
                 red_output("Compilation failed")
                 build_successful = False

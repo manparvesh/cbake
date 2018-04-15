@@ -1,4 +1,5 @@
-project: project_name
+project: test1
+compile: gcc
 executables:
   first:
     - a.h

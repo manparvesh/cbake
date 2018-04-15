@@ -1,5 +1,5 @@
 # cbake
-Easy to use build tool for C projects, written in Python.
+Easy to use build tool for C and C++ projects, written in Python.
 
 ## Features
 - Easy-to-write build files using the YAML standard
@@ -38,6 +38,10 @@ The build configuration can be simply put in a YAML file named: `.bake.yml`. A s
 ```yaml
 # name of the project
 project: project_name
+
+# Which command to use for compiling your project
+# Example: clang, gcc for C and clang++, g++ for C++ 
+compile: gcc
 
 # executables that you want to add, with the C/C++ files
 # that you want to add to each executable
