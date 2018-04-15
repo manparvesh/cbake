@@ -12,9 +12,6 @@ Easy to use build tool for C projects, written in Python.
 - After creating a `virtualenv`, run `pip install -e .`
 
 ## How to use
-- After installing this, just run `cbake` in the directory with the [bake file](#the-bake-file). 
-- All the output files will be written to the current directory.
-- For more options, consider the following examples/
 
 ### Example usages
 
@@ -35,7 +32,7 @@ OR
 $ cbake /path/to/input/directory -o /path/to/output/directory
 ```
 
-## The Bake file
+### The Bake file
 The build configuration can be simply put in a YAML file named: `.bake.yml`. A sample bake file is shown below:
 
 ```yaml
