@@ -57,14 +57,29 @@ executables:
 flags:
   - Wall
   - w
+
+# flag to enable testing 
+testing: true
+
+# out of the executables defines above, you can select some to be run as tests like shown below
+tests:
+  - first
 ```
 
-The above config will create the following command:
+The above config will create the following commands:
 ```
 $ gcc tests/test1/a.h tests/test1/b.c -o tests/test1/first.o -Wall -w
 $ gcc tests/test1/c.h tests/test1/d.c -o tests/test1/second.o -Wall -w
 ```
 
+### Testing
+To write tests for your project, you can add executables that contain the sources for tests. After compilation, you can run `cbake . test` with the previously used options and arguments, and the tests will be run. 
+
+Also, if you have not run `cbake` before in some directory and it contains some tests, you can directly run the `test` command and `cbake` will compile those executables on the fly!
+
+### Things to keep in mind
+- This cli should be used in the original sequence (`cbake [OPTIONS] [DIRECTORY] COMMAND [ARGS]`)
+- For testing, the input directory needs to be specified, but for normal compilation it's not needed. Example: `cbake . -v test`
 
 ## License
 ```
