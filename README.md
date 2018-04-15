@@ -52,7 +52,19 @@ executables:
   second:
     - c.h
     - d.h
+
+# This part adds the required compilation flags for your compiler
+flags:
+  - Wall
+  - w
 ```
+
+The above config will create the following command:
+```
+$ gcc tests/test1/a.h tests/test1/b.c -o tests/test1/first.o -Wall -w
+$ gcc tests/test1/c.h tests/test1/d.c -o tests/test1/second.o -Wall -w
+```
+
 
 ## License
 ```

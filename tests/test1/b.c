@@ -3,4 +3,5 @@
 
 int main() {
     printf("Hello world from first executable!\n");
+    return 0;
 }

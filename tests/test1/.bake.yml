@@ -8,3 +8,6 @@ executables:
     - c.h
     - d.c
 testing: true
+flags:
+  - Wall
+  - w
