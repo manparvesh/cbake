@@ -2,5 +2,6 @@
 #include <stdio.h>
 
 int main() {
-    printf("Hello world from second executable!");
+    print_something_from_c();
+    printf("Hello world from second executable!\n");
 }

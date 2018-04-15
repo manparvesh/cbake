@@ -1,5 +1,5 @@
 # cbake
-Simple build tool for the C language, written in Python.
+Easy to use build tool for C projects, written in Python.
 
 ## Features
 - Easy-to-write build files using the YAML standard
@@ -13,9 +13,29 @@ Simple build tool for the C language, written in Python.
 
 ## How to use
 - After installing this, just run `cbake` in the directory with the [bake file](#the-bake-file). 
-- This will create a new directory called `build` which will contain all the output files.
+- All the output files will be written to the current directory.
+- For more options, consider the following examples/
 
-### The Bake file
+### Example usages
+
+#### Simple usage
+```
+$ cbake
+```
+
+#### Usage with input directory
+```
+$ cbake /path/to/input/directory
+```
+
+#### Usage with input and output directories
+```
+$ cbake /path/to/input/directory --output-directory /path/to/output/directory
+OR
+$ cbake /path/to/input/directory -o /path/to/output/directory
+```
+
+## The Bake file
 The build configuration can be simply put in a YAML file named: `.bake.yml`. A sample bake file is shown below:
 
 ```yaml
@@ -33,11 +53,7 @@ executables:
     - d.h
 ```
 
-## TODO
-- Add support for compiler flags
-- Add support for tests
- 
- ## License
+## License
 ```
  MIT License
 
