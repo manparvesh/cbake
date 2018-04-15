@@ -1,9 +1,10 @@
 # cbake
-Easy to use build tool for C and C++ projects, written in Python.
+Easy to use build tool for C and C++ projects, written in Python. Think `cmake`, but easier to use.
 
 ## Features
 - Easy-to-write build files using the YAML standard
-- Always writes build files to a new folder so that the existing directory structure is not disturbed. 
+- Select input directory and output directory
+- Write tests easily
 
 ## Installing
 - You can run this package using both Python 2 and 3.
