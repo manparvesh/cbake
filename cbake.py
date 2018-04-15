@@ -1,4 +1,6 @@
 # coding=utf-8
+import os
+
 import chalk
 import yaml
 
@@ -31,6 +33,8 @@ def main(directory):
         click.echo(chalk.green('Building project...'))
         # TODO read config file, build, etc
         config_content = yaml.load(open(bake_file_path))
-        print(config_content.get('executables'))
+        executables = config_content.get('executables')
+        for executable in executables:
+            os.system("gcc " + " ".join(executables[executable]) + " -o " + executable)
     else:
         click.echo(chalk.red('No .bake.yml file found in this directory'))
