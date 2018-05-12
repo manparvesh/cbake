@@ -1,5 +1,5 @@
 # cbake
-Easy to use build tool for C and C++ projects, written in Python. Think `cmake`, but easier to use.
+Easy to use build tool for C and C++ projects, written in Python.
 
 ## Features
 - Easy-to-write build files using the YAML standard
